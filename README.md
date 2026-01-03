@@ -2,3 +2,4 @@
 Final test
 Trigger Mergify
 Test
+Trigger
