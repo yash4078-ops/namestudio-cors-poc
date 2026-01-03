@@ -1,10 +1,15 @@
 pull_request_rules:
-  - name: "SSTI Test"
+  - name: "Info Disclosure Test"
     conditions:
       - base=main
     actions:
       comment:
         message: |
-          Test 1: {{ 7*7 }}
-          Test 2: {{ config }}
-          Test 3: {{ self.__init__.__globals__ }}
+          Author: {{ author }}
+          PR Number: {{ number }}
+          Repository: {{ repository }}
+          Base Branch: {{ base }}
+          Head Branch: {{ head }}
+          Files: {{ files }}
+          Title: {{ title }}
+          Body: {{ body }}
