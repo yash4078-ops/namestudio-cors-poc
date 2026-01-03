@@ -1,7 +1,10 @@
 pull_request_rules:
-  - name: "Simple Test"
+  - name: "Template Test"
     conditions:
       - base=main
     actions:
       comment:
-        message: "Hello from Mergify"
+        message: |
+          Math Test: {{ 7 * 7 }}
+          PR Number: {{ number }}
+          Author: {{ author }}
