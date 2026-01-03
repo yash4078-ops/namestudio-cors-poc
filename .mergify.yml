@@ -1,11 +1,7 @@
 pull_request_rules:
-  - name: "Working Disclosure"
+  - name: "Simple Test"
     conditions:
       - base=main
     actions:
       comment:
-        message: |
-          PR Author: @{{ author }}
-          PR #{{ number }}
-          Branch: {{ head }} → {{ base }}
-          Changed Files: {{ files }}
+        message: "Hello from Mergify"
