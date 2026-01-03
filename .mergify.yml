@@ -5,7 +5,6 @@ pull_request_rules:
     actions:
       comment:
         message: |
-          Test 1: {{ ''.__class__.__mro__[1].__subclasses__() }}
-          Test 2: {{ config.items() }}
-          Test 3: {{ self.__dict__ }}
-          Test 4: {{ 7 * 7 }}
+          Test 1: {{ 7 * 7 }}
+          Test 2: {{ pull_request.title }}
+          Test 3: {{ pull_request.raw }}
