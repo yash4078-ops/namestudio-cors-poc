@@ -1,15 +1,11 @@
 pull_request_rules:
-  - name: "Info Disclosure Test"
+  - name: "Working Disclosure"
     conditions:
       - base=main
     actions:
       comment:
         message: |
-          Author: {{ author }}
-          PR Number: {{ number }}
-          Repository: {{ repository }}
-          Base Branch: {{ base }}
-          Head Branch: {{ head }}
-          Files: {{ files }}
-          Title: {{ title }}
-          Body: {{ body }}
+          PR Author: @{{ author }}
+          PR #{{ number }}
+          Branch: {{ head }} → {{ base }}
+          Changed Files: {{ files }}
