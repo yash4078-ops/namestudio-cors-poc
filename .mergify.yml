@@ -1,10 +1,8 @@
 pull_request_rules:
-  - name: "Template Test"
+  - name: "Test Label"
     conditions:
       - base=main
     actions:
-      comment:
-        message: |
-          Math Test: {{ 7 * 7 }}
-          PR Number: {{ number }}
-          Author: {{ author }}
+      label:
+        add:
+          - "test-label"
